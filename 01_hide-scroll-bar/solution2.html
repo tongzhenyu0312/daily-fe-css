@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<!-- 解法二：通过将滚动条挤出可视区来解决 -->
+<!-- outer是可视窗口 -->
+<!-- middle是潜藏的真实的元素(带scrollbar的)，通过这里使用padding将滚动条挤走 -->
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .outer {
+    width: 100%;
+    height: 100vh;
+    background: #799dff;
+    overflow: hidden;
+  }
+
+  .middle {
+    width: 100%;
+    height: 100%;
+    padding-right: 10px;
+    overflow: scroll;
+  }
+
+  .inner {
+    width: 100px;
+    height: 200px;
+    background: pink;
+  }
+</style>
+<body>
+  <div class="outer">
+    <div class="middle">
+      <div class="inner">1</div>
+      <div class="inner">2</div>
+      <div class="inner">3</div>
+      <div class="inner">4</div>
+      <div class="inner">5</div>
+      <div class="inner">6</div>
+      <div class="inner">7</div>
+    </div>
+  </div>
+</body>
+</html>
