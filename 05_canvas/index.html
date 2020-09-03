@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- <canvas id="drawing" width="200" height="200">a drawing of something</canvas> -->
+  <canvas id="drawing" width="200" height="200" style="width:100px;height:200px">a drawing of something</canvas>
+</body>
+<script>
+  var drawing = document.getElementById("drawing");
+  // if (drawing.getContext) {
+    var ctx = drawing.getContext('2d');
+    // console.log('context=======>', context, '<=======');
+    ctx.beginPath();
+    ctx.moveTo(0,0);
+    ctx.lineTo(200,200);
+    ctx.stroke();
+    // context.arc(100, 100, 99, 0, 2 * Math.PI, false);
+
+    // context.moveTo(194, 100);
+    // context.arc(100, 100, 94, 0, 2 * Math.PI, false);
+
+    // context.strokeStyle = '#000';
+    // context.stroke();
+    // context.fillStyle = '#ff0000';
+    // context.fillRect(10, 10,50,50);
+    // context.strokeStyle = "#ff0000";
+    // context.strokeRect(10,10,50,50);
+  // }
+</script>
+</html>

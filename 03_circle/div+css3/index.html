@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="right">
+    <div class="right-circle"></div>
+  </div>
+</body>
+<style>
+* {
+  box-sizing: border-box;
+}
+.right {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow:hidden;
+  background: #eee;
+}
+.right-circle {
+  width: 200px;
+  height: 200px;
+  border: 8px solid transparent;
+  border-radius: 50%;
+  /* background: red; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top: 8px solid black;
+  border-right: 8px solid black;
+  transform: rotate(-135deg);
+  /* animation: circle-right-move 5s linear infinite; */
+}
+
+@keyframes circle-right-move {
+  0% {
+    transform: rotate(-135deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+</style>
+</html>
